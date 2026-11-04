@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>辰銪科技股份有限公司</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#03111b;--navy:#001c2b;--blue:#004b75;--cyan:#00afcc;--orange:#ef960d;--ember:#c6560a;--ink:#e8f1f5;--mut:#8fa8b5;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;color:var(--ink);font:400 16px/1.85 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background-color:var(--bg);
+background-image:radial-gradient(1px 1px at 20px 30px,rgba(255,255,255,.55),transparent),radial-gradient(1px 1px at 110px 140px,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 170px 60px,rgba(0,175,204,.6),transparent),radial-gradient(1px 1px at 60px 175px,rgba(239,150,13,.5),transparent);background-size:210px 210px}
+a{color:inherit}
+a:focus-visible,.cell:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.nav{position:fixed;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px max(20px,4vw);padding-top:calc(12px + env(safe-area-inset-top,0px));background:rgba(3,17,27,.72);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,175,204,.18)}
+.nav .lg{display:flex;align-items:center;gap:12px;text-decoration:none;letter-spacing:.1em}
+.nav svg{width:34px;height:auto}
+.nav ul{display:flex;gap:clamp(14px,3vw,36px);list-style:none;margin:0;padding:0;font-size:.9rem}
+.nav ul a{text-decoration:none;color:var(--mut);transition:color .2s}
+.nav ul a:hover{color:var(--orange)}
+@media(max-width:560px){.nav .lg span{display:none}}
+.hero{position:relative;height:100svh;min-height:620px;overflow:hidden}
+#c{position:absolute;inset:0;width:100%;height:100%}
+.brand{position:absolute;left:max(24px,8vw);top:50%;transform:translateY(-50%);z-index:1}
+@media(max-width:979px){.brand{top:auto;bottom:9svh;transform:none}}
+.mark{width:clamp(64px,7vw,92px);height:auto;display:block;margin-bottom:22px;opacity:0;transition:opacity 3s ease}
+h1{margin:0;font-weight:300;font-size:clamp(2.2rem,5vw,4rem);line-height:1.25;letter-spacing:.14em;color:#f2f8fb;opacity:0;transition:opacity 3s ease}
+h1 span{display:block}.ind{margin-left:2.1em}
+.tag{margin:30px 0 0;max-width:26em;color:var(--mut);opacity:0;transition:opacity 2.4s ease 1.6s}
+.brand.lit .mark{opacity:1;filter:drop-shadow(0 0 12px rgba(0,175,204,.35))}
+.brand.lit h1{opacity:1;text-shadow:0 0 22px rgba(0,175,204,.25)}
+.brand.lit .tag{opacity:1}
+
+.brand.inst *{transition:none!important}
+.sec{padding:clamp(72px,11vw,140px) max(24px,8vw)}
+h2{margin:0 0 .7em;font-weight:300;font-size:clamp(1.7rem,3.4vw,2.6rem);letter-spacing:.08em;line-height:1.4}
+.mut{color:var(--mut)}
+.cos{position:relative;overflow:hidden;text-align:center;padding:clamp(110px,16vw,200px) max(24px,8vw)}
+.cos svg{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.cos p{position:relative;margin:0 auto}
+.cos .big{font-size:clamp(1.6rem,4vw,3rem);font-weight:300;letter-spacing:.1em;line-height:1.6;text-shadow:0 0 30px var(--bg),0 0 12px var(--bg)}
+.cos .sm{margin-top:1.4em;max-width:30em;color:var(--mut);text-shadow:0 0 12px var(--bg)}
+.sol{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center}
+@media(max-width:860px){.sol{grid-template-columns:1fr}}
+#flower{width:100%;height:auto;max-height:78svh}
+#flower text{fill:var(--ink);font-size:17px;text-anchor:middle;pointer-events:none}
+#flower .sub{font-size:12px;fill:var(--mut)}
+.hx{fill:rgba(0,75,117,.22);stroke:rgba(0,175,204,.55);stroke-width:1.2;transition:fill .3s,stroke .3s}
+.cell{outline:none}
+.cell:hover .hx,.cell:focus-visible .hx{fill:rgba(239,150,13,.16);stroke:var(--orange)}
+.ar{fill:none;stroke:#fff;stroke-width:2;stroke-dasharray:46 512;filter:drop-shadow(0 0 4px #7fe3ff);animation:run 5s linear infinite}
+@keyframes run{to{stroke-dashoffset:-558}}
+.core .hx{stroke:var(--orange);fill:rgba(239,150,13,.1)}
+.core text{fill:#ffd9a0}
+.steps{list-style:none;counter-reset:s;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 32px}
+@media(max-width:860px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;position:relative;padding-top:38px;border-top:1px solid rgba(0,175,204,.3)}
+.steps li::before{content:counter(s);position:absolute;top:-22px;left:0;width:48px;height:42px;display:grid;place-items:center;background:var(--cyan);color:var(--navy);font-weight:700;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.steps li:last-child::before{background:var(--orange)}
+.steps h3{margin:0 0 .3em;font-size:1.1rem}
+.steps p{margin:0;color:var(--mut)}
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 1.2em;max-width:34em}
+.about b{color:var(--orange);font-weight:400}
+.contact{background:linear-gradient(180deg,transparent,rgba(0,75,117,.25))}
+dl{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;margin:0 0 40px}
+dt{color:var(--mut)}dd{margin:0}
+.btn{display:inline-block;padding:.75em 1.9em;background:var(--orange);color:#1b0e00;font-weight:700;text-decoration:none;border-radius:2px;transition:background .2s}
+.btn:hover{background:#ffb84d}
+footer{padding:28px max(24px,8vw);color:var(--mut);font-size:.85rem;border-top:1px solid rgba(0,175,204,.18)}
+@media(prefers-reduced-motion:reduce){.ar{animation:none;opacity:0}html{scroll-behavior:auto}.mark,h1,.tag{transition:none}}
+[hidden]{display:none!important}
+.sub{padding-top:56px}
+.nav ul a[aria-current]{color:#fff;box-shadow:0 1px 0 var(--orange)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<radialGradient id="go" cx="37.68" cy="20.43" r="7.35" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#680000"/><stop offset=".38" stop-color="#991406"/><stop offset=".66" stop-color="#c6560a"/><stop offset=".71" stop-color="#ef960d"/><stop offset=".8" stop-color="#bc4509"/><stop offset="1" stop-color="#9e1607"/></radialGradient>
+<linearGradient id="gs" x1="30.67" y1="21.55" x2="52.5" y2="31.27" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#680000"/><stop offset=".38" stop-color="#991406"/><stop offset=".66" stop-color="#c6560a"/><stop offset=".71" stop-color="#ef960d"/><stop offset=".8" stop-color="#bc4509"/><stop offset="1" stop-color="#9e1607"/></linearGradient>
+<linearGradient id="gb" x1="7.17" y1="11.6" x2="38.34" y2="25.48" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#004b75"/><stop offset=".18" stop-color="#001f2f"/><stop offset=".23" stop-color="#001c2b"/><stop offset=".39" stop-color="#005d72"/><stop offset=".47" stop-color="#00afcc"/><stop offset=".54" stop-color="#007d96"/><stop offset=".72" stop-color="#003445"/><stop offset="1" stop-color="#001c2b"/></linearGradient>
+<symbol id="lg" viewBox="0 0 60 41"><path fill="url(#go)" d="M45,20.43a7.36,7.36,0,1,1-7.35-7.35A7.35,7.35,0,0,1,45,20.43Z"/><path fill="url(#gs)" d="M53,11.81a12.35,12.35,0,0,1-.74,3.08L48.12,25.72a17,17,0,0,1-1.76,3.36,18.7,18.7,0,0,1-2.58,3.12,14.63,14.63,0,0,1-3.05,2.3,6.38,6.38,0,0,1-3.15.91H24.5l-1.93,5.24h18a8,8,0,0,0,4-1.22,19.2,19.2,0,0,0,3.93-3.1,25,25,0,0,0,3.31-4.2,23.74,23.74,0,0,0,2.27-4.54L59.41,13c.15-.39.27-.79.38-1.19Z"/><path fill="url(#gb)" d="M11.58,35.41a3.35,3.35,0,0,1-2.46-.91,4.84,4.84,0,0,1-1.29-2.3,9.09,9.09,0,0,1-.21-3.09,12.32,12.32,0,0,1,.76-3.35l4.15-10.83a16.57,16.57,0,0,1,1.77-3.36,19.06,19.06,0,0,1,2.57-3.12,15.27,15.27,0,0,1,3.05-2.3,6.52,6.52,0,0,1,3.15-.91H47.35L49.28,0H20.13a8,8,0,0,0-4.05,1.23,19.14,19.14,0,0,0-3.93,3.09,25.54,25.54,0,0,0-3.31,4.2,24.33,24.33,0,0,0-2.27,4.54L1.24,27.65a17.25,17.25,0,0,0-1,4.51,13.37,13.37,0,0,0,.27,4.17,6.6,6.6,0,0,0,1.66,3.1,4.24,4.24,0,0,0,3.16,1.22H21.06L23,35.41Z"/></symbol>
+</defs></svg>
+
+<nav class="nav">
+<a class="lg" href="#home"><svg viewBox="0 0 60 41" aria-hidden="true"><use href="#lg"/></svg><span>辰銪科技股份有限公司</span></a>
+<ul><li><a href="#home">首頁</a></li><li><a href="#solutions">服務內容</a></li><li><a href="#about">關於我們</a></li><li><a href="#contact">聯絡我們</a></li></ul>
+</nav>
+
+<div class="page" id="p-home"><header class="hero">
+<canvas id="c" aria-hidden="true"></canvas>
+<div class="brand" id="brand">
+<svg class="mark" viewBox="0 0 60 41" role="img" aria-label="辰銪科技 logo"><use href="#lg"/></svg>
+<h1><span>辰銪科技</span><span class="ind">股份有限公司</span></h1>
+<p class="tag">Let us achieve your idea.<br>擁有豐富實務專案經驗的創意設計團隊。</p>
+</div>
+</header></div>
+<div class="page sub" id="p-services" hidden><section class="sec">
+<div class="sol">
+<div>
+<h2>服務內容</h2>
+<p class="mut">我們以系統整合為核心，提供客製化研發與生產服務，涵蓋六大應用領域。</p>
+<p class="mut">相關種類頗多，無法一一列舉。如有任何疑惑或問題，歡迎來電或來信詢問。</p>
+</div>
+<svg id="flower" viewBox="-260 -260 520 520" role="group" aria-label="服務領域"></svg>
+</div>
+
+<h2 style="margin-top:clamp(72px,10vw,120px)">從想法到樣品完成</h2>
+<ol class="steps">
+<li><h3>洽談與討論</h3><p>依客戶的想法和需求，當下提出適合的解決方案雛形。</p></li>
+<li><h3>研發討論與 POC</h3><p>研發團隊討論並進行 POC 驗證。</p></li>
+<li><h3>規格書、時程與費用</h3><p>向客戶提出具體的規格書、預計工作時程與相應費用。</p></li>
+<li><h3>研發與設計</h3><p>研發專案正式成立後，團隊依工作時程進入研發與設計階段。</p></li>
+<li><h3>EVT、DVT 驗證</h3><p>透過 EVT 與 DVT，確保樣品的可用性及可靠性。</p></li>
+<li><h3>客戶確認並結案</h3><p>客戶確認樣品完成且符合需求，專案完結。</p></li>
+</ol>
+</section></div>
+<div class="page sub" id="p-about" hidden><section class="cos" aria-label="品牌理念">
+<svg id="nest" viewBox="-400 -300 800 600" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+<p class="big">一塊小小的電路板，<br>是一整個宇宙的縮影。</p>
+<p class="sm">我們設計的產品也許只有手掌大，內部卻是軟體、硬體、韌體交織而成的完整系統。</p>
+</section><section class="sec">
+<div class="about">
+<h2>專業系統整合研發公司，<br>2012 年成立。</h2>
+<div>
+<p>辰銪科技股份有限公司專注於軟體、硬體、韌體的系統整合研發，現階段涉及工業控制設備、醫療美容儀器、車用電子產品等多項領域，並已有與大小型廠商合作的經驗。</p>
+<p>我們秉持「<b>優質設計服務、滿足客戶需求、創造雙贏的局面</b>」的理念，以「交貨準時、優良品質、服務貼心、價格合理、產品有價值」為目標。</p>
+<p>透過協調客戶、供應、生產三方，讓三方共創利益，達到永續經營的理想。</p>
+</div>
+</div>
+</section></div>
+<div class="page sub" id="p-contact" hidden><section class="sec contact">
+<h2>聯絡我們</h2>
+<dl>
+<dt>電話</dt><dd>(03) 493-3933 / 493-3934 #10（陳小姐）</dd>
+<dt>傳真</dt><dd>(03) 493-3935</dd>
+<dt>E-mail</dt><dd><a href="mailto:lisa_chen@chenyo-tech.com.tw">lisa_chen@chenyo-tech.com.tw</a></dd>
+<dt>地址</dt><dd><a href="https://goo.gl/maps/J1mUoJNEdfoKx8EH6" target="_blank" rel="noopener">320 桃園市平鎮區廣泰路248號4樓</a></dd>
+</dl>
+<a class="btn" href="mailto:lisa_chen@chenyo-tech.com.tw">寄信給我們</a>
+</section></div>
+<footer id="ft" hidden>© 辰銪科技股份有限公司</footer>
+
+<script>
+const $=s=>document.querySelector(s),hp=(cx,cy,r)=>[0,1,2,3,4,5].map(i=>[cx+r*Math.cos(Math.PI/3*i),cy+r*Math.sin(Math.PI/3*i)]),
+pts=a=>a.map(q=>q[0].toFixed(1)+','+q[1].toFixed(1)).join(' '),
+RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* 服務蜂巢：中心 + 六個領域 */
+const R=96,cs=[[0,0,'系統整合','軟體、硬體、韌體']].concat(['工業控制相關','車用電子相關','醫美儀器相關','物聯網與無線裝置','逆向工程','軟體控制'].map((t,i)=>{const a=Math.PI/3*i+Math.PI/6;return[Math.cos(a)*R*1.732,Math.sin(a)*R*1.732,t]}));
+$('#flower').innerHTML=cs.map(([x,y,t,s],i)=>{const p=pts(hp(x,y,R-3));return `<g class="cell${i?'':' core'}" tabindex="0" role="img" aria-label="${t}"><polygon class="hx" points="${p}"/><polygon class="ar" points="${p}" style="animation-delay:${i*-.8}s"/><text x="${x}" y="${y+(s?-3:6)}">${t}</text>${s?`<text class="sub" x="${x}" y="${y+22}">${s}</text>`:''}</g>`}).join('');
+
+/* 由小到大的六角形：從一個細胞放大到宇宙 */
+$('#nest').innerHTML=[...Array(8)].map((_,i)=>`<polygon points="${pts(hp(0,0,16*1.55**i))}" fill="${i?'none':'#ef960d'}" stroke="${i?'#00afcc':'#ef960d'}" stroke-opacity="${(.75-i*.09).toFixed(2)}" vector-effect="non-scaling-stroke"/>`).join('');
+
+/* 首頁：一道光穿過蜂巢縫隙 → 沿線點亮文字與 logo → 縫隙緩慢發光 */
+const hero=$('#p-home .hero'),cv=$('#c'),x=cv.getContext('2d'),brand=$('#brand'),
+pages=['home','services','about','contact'],
+TT={home:'辰銪科技股份有限公司',services:'服務內容｜辰銪科技股份有限公司',about:'關於我們｜辰銪科技股份有限公司',contact:'聯絡我們｜辰銪科技股份有限公司'};
+let W,H,D,r,V,E,adj,ph,route,LP,LL,LEN,SP,trail=[],state=0,tStart=0,d=0,drawn=0,t2=0,last=0,cur='home',started=0,running=0;
+function bfs(a,b){const pv=new Map([[a,-1]]),q=[a];while(q.length){const u=q.shift();if(u===b)break;for(const n of adj[u])if(!pv.has(n[0])){pv.set(n[0],u);q.push(n[0])}}const p=[];for(let u=b;u!==-1;u=pv.get(u))p.push(u);return p.reverse()}
+function build(){
+ const b0=hero.getBoundingClientRect();W=b0.width;H=b0.height;D=Math.min(devicePixelRatio||1,2);
+ cv.width=W*D;cv.height=H*D;
+ const m=W<980;r=m?W/16:Math.min(W,H*1.3)/17;SP=Math.max(170,r*4.2);
+ const cx=m?W*.5:W*.7,cy=m?H*.3:H*.44,h=Math.sqrt(3)*r,mp=new Map(),em=new Set();
+ V=[];E=[];adj=[];
+ const vid=p=>{const k=Math.round(p[0]*10)+','+Math.round(p[1]*10);let i=mp.get(k);if(i==null){i=V.length;mp.set(k,i);V.push(p);adj.push([])}return i};
+ for(let c=-4;c<=4;c++)for(let q=-4;q<=4;q++){
+  const px=cx+c*1.5*r,py=cy+(q+(c&1?.5:0))*h;
+  if(((px-cx)/(6.2*r))**2+((py-cy)/(4.2*r))**2<1){
+   const v=hp(px,py,r).map(vid);
+   for(let i=0;i<6;i++){const a=v[i],b=v[(i+1)%6],k=a<b?a+'_'+b:b+'_'+a;if(!em.has(k)){em.add(k);E.push([a,b]);adj[a].push([b,E.length-1]);adj[b].push([a,E.length-1])}}}}
+ ph=new Float32Array(E.length);E.forEach((e,i)=>{ph[i]=V[e[0]][0]*.006+V[e[0]][1]*.004+Math.random()*1.2});
+ let ai=0,st=0;V.forEach((p,i)=>{const b=V[ai];if(p[0]<b[0]-1||(Math.abs(p[0]-b[0])<1&&p[1]>b[1]))ai=i;if(p[0]>V[st][0])st=i});
+ const A=V[ai],hb=$('#brand h1').getBoundingClientRect(),py0=hb.bottom-b0.top+14,px0=hb.left-b0.left;
+ if(m)LP=[A,[10,A[1]],[10,py0],[W-24,py0]];
+ else{const dd=Math.max(0,Math.min(Math.abs(py0-A[1]),A[0]-40-px0-30));LP=[A,[A[0]-40,A[1]],[A[0]-40-dd,py0],[px0,py0]]}
+ LL=LP.slice(1).map((p,i)=>Math.hypot(p[0]-LP[i][0],p[1]-LP[i][1]));LEN=LL.reduce((a,b)=>a+b,0);
+ /* 光的路線：從蜂巢右側出發，慢慢穿過縫隙，最後走到左側接線處 */
+ const used=new Set();let c0=st,pv=-1;route=[c0];
+ for(let k=0;k<14;k++){let o=adj[c0].filter(n=>n[0]!==pv);const f=o.filter(n=>!used.has(n[1]));if(f.length)o=f;if(!o.length)o=adj[c0];const n=o[Math.floor(Math.random()*o.length)];used.add(n[1]);pv=c0;c0=n[0];route.push(c0)}
+ route=route.concat(bfs(c0,ai).slice(1));
+}
+function ptAt(s){let a=0;for(let i=0;i<LL.length;i++){const b=a+LL[i];if(s<=b||i===LL.length-1){const f=Math.min(1,(s-a)/LL[i]);return[LP[i][0]+(LP[i+1][0]-LP[i][0])*f,LP[i][1]+(LP[i+1][1]-LP[i][1])*f]}a=b}}
+function seg(s0,s1){let a=0;x.beginPath();for(let i=0;i<LL.length;i++){const b=a+LL[i];if(b>=s0&&a<=s1){const f=t=>[LP[i][0]+(LP[i+1][0]-LP[i][0])*(t-a)/LL[i],LP[i][1]+(LP[i+1][1]-LP[i][1])*(t-a)/LL[i]],u=f(Math.max(s0,a)),v=f(Math.min(s1,b));x.moveTo(u[0],u[1]);x.lineTo(v[0],v[1])}a=b}x.stroke()}
+function frame(t){
+ const dt=Math.min(t-last||16,50);last=t;
+ x.setTransform(D,0,0,D,0,0);x.clearRect(0,0,W,H);
+ if(state===0&&t>=tStart){state=1;d=0}
+ let hd=null;
+ if(state===1){d+=SP*dt/1000;const n=route.length-1,dr=n*r;
+  if(d<=dr){const i=Math.min(Math.floor(d/r),n-1),f=(d-i*r)/r,a=V[route[i]],b=V[route[i+1]];hd=[a[0]+(b[0]-a[0])*f,a[1]+(b[1]-a[1])*f]}
+  else{const s=Math.min(d-dr,LEN);drawn=s;hd=ptAt(s);if(s>=LEN){state=2;t2=t;brand.classList.add('lit')}}
+  trail.push([hd[0],hd[1],t])}
+ /* 蜂巢縫隙：平時只有淡淡的線，點亮後有光影緩慢流過 */
+ const a=state===2?Math.min((t-t2)/3500,1):0;
+ x.lineCap='round';
+ for(let i=0;i<E.length;i++){const p=V[E[i][0]],q=V[E[i][1]];
+  x.shadowBlur=0;x.lineWidth=1;x.strokeStyle='rgba(0,175,204,.2)';x.beginPath();x.moveTo(p[0],p[1]);x.lineTo(q[0],q[1]);x.stroke();
+  if(a>0){const v=Math.pow(Math.max(0,Math.sin(t/10000*6.283+ph[i])),3)*a;
+   if(v>.04){x.lineWidth=1.6;x.strokeStyle=`rgba(200,238,255,${.6*v})`;if(v>.25){x.shadowBlur=10*v;x.shadowColor='rgba(0,175,204,.9)'}x.beginPath();x.moveTo(p[0],p[1]);x.lineTo(q[0],q[1]);x.stroke()}}}
+ /* 連接線 */
+ x.shadowBlur=0;x.lineWidth=1.2;x.strokeStyle=state===2?'rgba(0,175,204,.5)':'rgba(255,255,255,.22)';if(drawn>0)seg(0,drawn);
+ /* 那一道光與它短短的尾巴 */
+ while(trail.length&&t-trail[0][2]>1100)trail.shift();
+ for(let i=1;i<trail.length;i++){const al=Math.pow(1-(t-trail[i][2])/1100,1.5);if(al<=0)continue;x.strokeStyle=`rgba(255,255,255,${al})`;x.lineWidth=.8+1.6*al;x.shadowBlur=12*al;x.shadowColor='rgba(127,227,255,.9)';x.beginPath();x.moveTo(trail[i-1][0],trail[i-1][1]);x.lineTo(trail[i][0],trail[i][1]);x.stroke()}
+ if(hd){x.fillStyle='#fff';x.shadowBlur=14;x.shadowColor='rgba(127,227,255,.9)';x.beginPath();x.arc(hd[0],hd[1],2.2,0,7);x.fill()}
+ x.shadowBlur=0;
+ if(!RM&&cur==='home')requestAnimationFrame(frame);else running=0}
+function startHero(){build();
+ if(!started&&!RM){started=1;state=0;tStart=performance.now()+900;trail=[];drawn=0}
+ else{started=1;state=2;t2=-1e9;drawn=LEN;brand.classList.add('lit','inst')}
+ if(!running){running=1;last=0;requestAnimationFrame(frame)}}
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{if(cur!=='home'||!started)return;build();if(state<2){state=0;tStart=performance.now()+300;trail=[];drawn=0}else drawn=LEN},150)});
+
+/* 分頁 */
+function route_(){let p=location.hash.slice(1);if(!pages.includes(p))p='home';cur=p;
+ pages.forEach(k=>{$('#p-'+k).hidden=k!==p});$('#ft').hidden=p==='home';
+ document.querySelectorAll('.nav ul a').forEach(a=>a.getAttribute('href')==='#'+p?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ document.title=TT[p];scrollTo(0,0);if(p==='home')startHero()}
+addEventListener('hashchange',route_);
+(document.fonts?document.fonts.ready:Promise.resolve()).then(route_);
+</script>
+</body>
+</html>
