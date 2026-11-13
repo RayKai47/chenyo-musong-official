@@ -14,3 +14,10 @@ next-env.d.ts
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+.next-*
+
+# 環境變數（含密碼），不要進 git
+.env
+
+# 後台上傳的圖片（正式站另外備份）
+/media
