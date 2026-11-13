@@ -9,7 +9,7 @@
 | 啟動 | `yarn dev:chenyo` | `yarn dev:musong` |
 | 網站 | http://chenyo.localhost:3000 | http://musong.localhost:3001 |
 | 後台 | http://chenyo.localhost:3000/admin | http://musong.localhost:3001/admin |
-| 資料庫 | `chenyo_db` | `musong_db` |
+| 資料庫 | `chenyo_ofc` | `musong_ofc` |
 
 為什麼要啟動兩次：Payload 3 在同一個執行中的程式裡只能有一份設定（後台固定使用同一個快取的 Payload）。
 分成兩個程式，兩家的資料庫、帳號、上傳的圖片就完全分開。
@@ -28,9 +28,9 @@
 
    ```sql
    CREATE ROLE chenyo_user WITH LOGIN PASSWORD '自訂密碼';
-   CREATE DATABASE chenyo_db OWNER chenyo_user;
+   CREATE DATABASE chenyo_ofc OWNER chenyo_user;
    CREATE ROLE musong_user WITH LOGIN PASSWORD '另一組密碼';
-   CREATE DATABASE musong_db OWNER musong_user;
+   CREATE DATABASE musong_ofc OWNER musong_user;
    \q
    ```
 
