@@ -1,16 +1,41 @@
 {
-  "name": "chenyo-official",
+  "name": "chenyo-musong-official",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev:chenyo": "SITE=chenyo next dev -p 3000",
+    "dev:musong": "SITE=musong next dev -p 3001",
+    "build:chenyo": "SITE=chenyo next build",
+    "build:musong": "SITE=musong next build",
+    "start:chenyo": "SITE=chenyo next start -p 3000",
+    "start:musong": "SITE=musong next start -p 3001",
+    "payload:chenyo": "SITE=chenyo payload",
+    "payload:musong": "SITE=musong payload",
+    "migrate:create:chenyo": "SITE=chenyo payload migrate:create",
+    "migrate:create:musong": "SITE=musong payload migrate:create",
+    "migrate:chenyo": "SITE=chenyo payload migrate",
+    "migrate:musong": "SITE=musong payload migrate",
+    "migrate:status:chenyo": "SITE=chenyo payload migrate:status",
+    "migrate:status:musong": "SITE=musong payload migrate:status",
+    "seed:chenyo": "SITE=chenyo payload run payload/seed/chenyo.ts",
+    "seed:musong": "SITE=musong payload run payload/seed/musong.ts",
+    "generate:types": "SITE=chenyo payload generate:types && SITE=musong payload generate:types",
+    "generate:importmap": "SITE=chenyo payload generate:importmap",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "3.93.0",
+    "@payloadcms/next": "3.93.0",
+    "@payloadcms/richtext-lexical": "3.93.0",
+    "@payloadcms/translations": "3.93.0",
+    "@payloadcms/ui": "3.93.0",
+    "graphql": "^16.8.1",
     "next": "^16.4.3",
+    "payload": "3.93.0",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
     "@types/node": "^22",
@@ -18,5 +43,8 @@
     "@types/react-dom": "^19.3.0",
     "typescript": "^5.9.3"
   },
-  "packageManager": "yarn@4.18.1"
+  "packageManager": "yarn@4.18.1",
+  "engines": {
+    "node": ">=24.22.1"
+  }
 }

@@ -1,0 +1,115 @@
+/* 內容區用淺底；首頁 hero 與頁尾用鮮藍（取自 logo 藍的色相）；橘色只當重點色 */
+:root{--vivid:#0b6cc0;--vivid-2:#0a86c9;--bg:#f4f7f9;--surface:#ffffff;--navy:#0d2a3a;--blue:#004b75;--cyan:#0097b2;--line:rgba(0,75,117,.16);--orange:#e08a0b;--ink:#1d2b35;--mut:#5d707c;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+/* 背景：細的電路板走線 */
+body{margin:0;color:var(--ink);font-family:var(--font-noto),"PingFang TC","Microsoft JhengHei",sans-serif;font-weight:400;font-size:16px;line-height:1.85;background:var(--bg) url(/chenyo/circuit.svg) 0 0/240px 240px}
+a{color:inherit}
+/* 內容少的頁面，頁尾仍貼齊畫面底部 */
+body{display:flex;flex-direction:column;min-height:100svh}
+main{flex:1}
+a:focus-visible,.cell:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+
+/* 導覽列 */
+.nav{position:fixed;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px max(20px,4vw);padding-top:calc(12px + env(safe-area-inset-top,0px));background:rgba(255,255,255,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .lg{display:flex;align-items:center;gap:12px;text-decoration:none;letter-spacing:.1em;color:var(--navy)}
+.nav .lg img{width:38px;height:auto;display:block}
+.nav ul{display:flex;gap:clamp(14px,3vw,36px);list-style:none;margin:0;padding:0;font-size:.9rem}
+.nav ul a{text-decoration:none;color:var(--mut);transition:color .2s}
+.nav ul a:hover{color:var(--blue)}
+.nav ul a[aria-current]{color:var(--navy);box-shadow:0 1px 0 var(--orange)}
+@media(max-width:560px){.nav .lg span{display:none}}
+
+/* 首頁 hero */
+.hero{position:relative;height:100svh;min-height:620px;overflow:hidden;background:url(/chenyo/circuit-light.svg) 0 0/240px 240px,linear-gradient(135deg,var(--vivid) 0%,#0a5fae 45%,var(--vivid-2) 100%)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.brand{position:absolute;left:max(24px,8vw);top:50%;transform:translateY(-50%);z-index:1}
+@media(max-width:979px){.brand{top:auto;bottom:9svh;transform:none}}
+.mark{width:clamp(150px,15vw,210px);height:auto;display:block;margin-bottom:26px;opacity:0;transition:opacity 1.6s ease}
+h1{margin:0;font-weight:300;font-size:clamp(2.2rem,5vw,4rem);line-height:1.25;letter-spacing:.14em;color:#fff;opacity:0;transition:opacity 1.6s ease}
+h1 span{display:block}.ind{margin-left:2.1em}
+.tag{margin:30px 0 0;max-width:26em;color:rgba(255,255,255,.82);opacity:0;transition:opacity 1.4s ease .8s}
+.brand.lit .mark,.brand.lit h1,.brand.lit .tag{opacity:1}
+.brand.inst *{transition:none!important}
+
+/* 內頁共用 */
+.sub{padding-top:56px}
+.sec{padding:clamp(72px,11vw,140px) max(24px,8vw)}
+h2{margin:0 0 .7em;font-weight:300;font-size:clamp(1.7rem,3.4vw,2.6rem);letter-spacing:.08em;line-height:1.4;color:var(--navy)}
+.mut{color:var(--mut)}
+.mut a{color:var(--blue)}
+
+/* 關於我們：由小到大的六角形 */
+.cos{position:relative;overflow:hidden;text-align:center;padding:clamp(110px,16vw,200px) max(24px,8vw);background:rgba(255,255,255,.55)}
+.cos svg{position:absolute;inset:0;width:100%;height:100%;opacity:.4}
+.cos p{position:relative;margin:0 auto}
+.cos .big{font-size:clamp(1.6rem,4vw,3rem);font-weight:300;letter-spacing:.1em;line-height:1.6;color:var(--navy);text-shadow:0 0 24px var(--bg),0 0 10px var(--bg)}
+.cos .sm{margin-top:1.4em;max-width:30em;color:var(--mut);text-shadow:0 0 10px var(--bg)}
+
+/* 服務內容：系統整合蜂巢 */
+.sol{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px;align-items:center}
+@media(max-width:860px){.sol{grid-template-columns:1fr}}
+.flower{width:100%;height:auto;max-height:78svh}
+.flower text{fill:var(--ink);font-size:17px;text-anchor:middle;pointer-events:none}
+.flower .sub{font-size:12px;fill:var(--mut)}
+.hx{fill:rgba(255,255,255,.85);stroke:rgba(0,120,160,.4);stroke-width:1.2;transition:fill .3s,stroke .3s}
+.cell{outline:none}
+.cell:hover .hx,.cell:focus-visible .hx{fill:rgba(224,138,11,.08);stroke:var(--orange)}
+.ar{fill:none;stroke:var(--cyan);stroke-width:2;stroke-dasharray:46 512;opacity:.7;animation:run 5s linear infinite}
+@keyframes run{to{stroke-dashoffset:-558}}
+.core .hx{stroke:var(--orange);fill:rgba(224,138,11,.06)}
+.core text{fill:#9a4f00}
+a.cell{cursor:pointer}
+
+/* 服務項目 */
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media(max-width:860px){.fields{grid-template-columns:1fr}}
+.field{background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--cyan);scroll-margin-top:96px;overflow:hidden}
+.field:target{border-top-color:var(--orange)}
+.field .pic{display:block;width:100%;aspect-ratio:16/5;object-fit:cover;background:#eef3f6;border-bottom:1px solid var(--line)}
+.field .body{padding:24px 30px 18px}
+.field h3{margin:0 0 .3em;font-size:1.25rem;font-weight:400;letter-spacing:.06em;color:var(--navy)}
+.field .body>p{margin:0 0 1em;font-size:.95rem}
+.field ul{list-style:none;margin:0;padding:0}
+.field li{padding:14px 0;border-top:1px solid var(--line)}
+.field h4{margin:0 0 .15em;font-size:1rem;font-weight:700;color:var(--ink)}
+.field li p{margin:0;color:var(--mut);font-size:.92rem;line-height:1.75}
+.field .ex{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.field .ex span{padding:1px 10px;border:1px solid rgba(224,138,11,.4);color:#9a4f00;background:rgba(224,138,11,.05);font-size:.82rem;border-radius:2px}
+
+/* 開發流程 */
+.steps{list-style:none;counter-reset:s;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:56px 32px}
+@media(max-width:860px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;position:relative;padding-top:38px;border-top:1px solid rgba(0,120,160,.3)}
+.steps li::before{content:counter(s);position:absolute;top:-22px;left:0;width:48px;height:42px;display:grid;place-items:center;background:#e3f2f6;color:var(--blue);border:0;font-weight:700;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.steps li:last-child::before{background:#fbecd6;color:#9a4f00}
+.steps h3{margin:0 0 .3em;font-size:1.1rem;color:var(--navy)}
+.steps p{margin:0;color:var(--mut)}
+
+/* 關於我們 */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:48px}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 1.2em;max-width:34em}
+.about b{color:#9a4f00;font-weight:400}
+
+/* 聯絡我們 */
+.contact{background:linear-gradient(180deg,transparent,rgba(0,120,160,.06))}
+dl{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;margin:0 0 40px}
+dt{color:var(--mut)}dd{margin:0}
+.btn{display:inline-block;padding:.75em 1.9em;background:var(--vivid);color:#fff;font-weight:700;text-decoration:none;border-radius:2px;transition:background .2s}
+.btn:hover{background:var(--vivid-2)}
+
+footer{padding:28px max(24px,8vw);color:rgba(255,255,255,.85);font-size:.85rem;background:url(/chenyo/circuit-light.svg) 0 0/240px 240px,linear-gradient(135deg,#0a5fae,var(--vivid))}
+
+@media(prefers-reduced-motion:reduce){.ar{animation:none;opacity:0}html{scroll-behavior:auto}.mark,h1,.tag{transition:none}}
+
+/* 首頁往下滾動的區塊 */
+.more{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:28px}
+.more a{color:var(--blue);text-decoration:none;font-weight:700;border-bottom:1px solid rgba(0,75,117,.3);padding-bottom:2px;transition:color .2s,border-color .2s}
+.more a::after{content:" →"}
+.more a:hover{color:var(--vivid);border-color:var(--vivid)}
+.cta{text-align:center;background:rgba(255,255,255,.6);border-top:1px solid var(--line)}
+.cta p{max-width:34em;margin:0 auto 32px}
+.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:1;color:rgba(255,255,255,.7);font-size:.8rem;letter-spacing:.2em;text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;opacity:0;transition:opacity 1.4s ease 1.4s}
+.scroll-hint::after{content:"";width:1px;height:28px;background:linear-gradient(rgba(255,255,255,.8),transparent)}
+.brand.lit~.scroll-hint{opacity:1}
